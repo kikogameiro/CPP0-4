@@ -6,7 +6,7 @@
 /*   By: fgameiro <fgameiro@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/25 16:26:52 by fgameiro          #+#    #+#             */
-/*   Updated: 2026/08/04 16:29:10 by fgameiro         ###   ########.fr       */
+/*   Updated: 2026/08/05 16:39:49 by fgameiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,10 @@ int	main(void)
 			if(pb.addContact())
 				return 2;
 		}
-/* 		if (input == "SEARCH")
-			pb.search(); */
+		if (input == "SEARCH")
+			pb.search();
+		if (input == "DEBUG")
+			pb.debug();
 		if (input == "EXIT")
 			break ;
 	}
