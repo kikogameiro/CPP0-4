@@ -6,7 +6,7 @@
 /*   By: fgameiro <fgameiro@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/25 16:06:50 by fgameiro          #+#    #+#             */
-/*   Updated: 2026/06/25 16:24:06 by fgameiro         ###   ########.fr       */
+/*   Updated: 2026/08/04 16:30:21 by fgameiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,20 @@
 
 class PhoneBook
 {
-	private:
-		Contacts contacts[9];
-	public:
-		
+private:
+	Contacts	contacts[8];
+	int			count;
+	int			nextIndex;
+public:
+	PhoneBook();
+	~PhoneBook();
+	int		addContact();
+	int		search();
+	void	setContacts(std::string	firstName, 
+					std::string lastName, 
+					std::string Nickname, 
+					std::string phoneNumber, 
+					std::string dSecret);
 };
 
 #endif

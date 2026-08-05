@@ -6,19 +6,24 @@
 #    By: fgameiro <fgameiro@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/06/25 15:38:20 by fgameiro          #+#    #+#              #
-#    Updated: 2026/06/25 15:59:57 by fgameiro         ###   ########.fr        #
+#    Updated: 2026/08/04 15:49:50 by fgameiro         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		= megaphone
+NAME		= phonebook
 
 CC			= c++
 CFLAGS		= -Wall -Wextra -Werror -std=c++98
 
-SRCS		= megaphone.cpp
+INCLUDES	=	inc/contact.hpp \
+				inc/phonebook.hpp
+
+SRCS		=	main.cpp \
+				src/contact.cpp \
+				src/phonebook.cpp
 
 OBJ_DIR		= obj
-OBJS		= $(addprefix $(OBJ_DIR)/,$(SRCS:.cpp=.o))
+OBJS 		= $(addprefix $(OBJ_DIR)/,$(SRCS:.cpp=.o))
 
 all: $(NAME)
 
@@ -28,7 +33,8 @@ $(NAME): $(OBJS)
 $(OBJ_DIR):
 	mkdir -p $(OBJ_DIR)
 
-$(OBJ_DIR)/%.o: %.cpp | $(OBJ_DIR)
+$(OBJ_DIR)/%.o: %.cpp
+	@mkdir -p $(dir $@)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
