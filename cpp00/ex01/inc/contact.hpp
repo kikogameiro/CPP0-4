@@ -6,7 +6,7 @@
 /*   By: fgameiro <fgameiro@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/25 16:07:03 by fgameiro          #+#    #+#             */
-/*   Updated: 2026/08/05 16:52:07 by fgameiro         ###   ########.fr       */
+/*   Updated: 2026/08/11 10:46:19 by fgameiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 # include <iomanip>
 # include <string>
 # include <cstdlib>
-# include <algorithm>
 
 class Contacts
 {
