@@ -6,7 +6,7 @@
 /*   By: fgameiro <fgameiro@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/31 14:25:53 by fgameiro          #+#    #+#             */
-/*   Updated: 2026/08/02 15:38:38 by fgameiro         ###   ########.fr       */
+/*   Updated: 2026/08/19 11:44:37 by fgameiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ int	main(int argc, char **argv)
 		std::cout << "Error: could not create output file." << std::endl;
 		return (1);
 	}
-	while(getline (infile, buffer))
+	while(getline (infile, buffer, '\0'))
 	{
 		while ((pos = buffer.find(s1, pos)) != std::string::npos)
 		{
@@ -52,7 +52,7 @@ int	main(int argc, char **argv)
 			buffer.insert(pos, s2);
 			pos += s2.length();
 		}
-		outfile << buffer << '\n';
+		outfile << buffer;
 	}
 	infile.close();
 	outfile.close();

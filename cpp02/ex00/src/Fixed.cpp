@@ -6,13 +6,11 @@
 /*   By: fgameiro <fgameiro@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/12 14:53:10 by fgameiro          #+#    #+#             */
-/*   Updated: 2026/08/12 18:14:20 by fgameiro         ###   ########.fr       */
+/*   Updated: 2026/08/18 18:33:44 by fgameiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/Fixed.hpp"
-
-const int Fixed::_fractional_bits = 8;
 
 // Default constructor
 Fixed::Fixed(void) : _fixed_point(0)

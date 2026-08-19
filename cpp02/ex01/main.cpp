@@ -5,22 +5,10 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: fgameiro <fgameiro@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/08/12 10:29:00 by fgameiro          #+#    #+#             */
-/*   Updated: 2026/08/17 17:10:23 by fgameiro         ###   ########.fr       */
+/*   Created: 2026/08/17 17:27:48 by fgameiro          #+#    #+#             */
+/*   Updated: 2026/08/17 17:28:05 by fgameiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
 #include "inc/Fixed.hpp"
 
-int main( void ) 
-{
-	Fixed a;
-	Fixed b( a );
-	Fixed c;
-	c = b;
-	std::cout << a.getRawBits() << std::endl;
-	std::cout << b.getRawBits() << std::endl;
-	std::cout << c.getRawBits() << std::endl;
-	return 0;
-}

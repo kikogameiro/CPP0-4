@@ -6,7 +6,7 @@
 /*   By: fgameiro <fgameiro@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/12 14:53:08 by fgameiro          #+#    #+#             */
-/*   Updated: 2026/08/12 15:44:50 by fgameiro         ###   ########.fr       */
+/*   Updated: 2026/08/18 18:33:51 by fgameiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ class Fixed
 {
 	private:
 		int					_fixed_point;
-		static const int	_fractional_bits;
+		static const int	_fractional_bits = 8;
 	public:
 		Fixed(void);
 		Fixed(const Fixed& other);
