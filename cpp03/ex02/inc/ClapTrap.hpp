@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: fgameiro <fgameiro@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/08/26 09:26:58 by fgameiro          #+#    #+#             */
-/*   Updated: 2026/08/26 09:26:59 by fgameiro         ###   ########.fr       */
+/*   Created: 2026/08/26 09:26:36 by fgameiro          #+#    #+#             */
+/*   Updated: 2026/08/26 09:26:37 by fgameiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,12 @@
 
 class ClapTrap
 {
-	private:
+	protected:
 		std::string	name;
 		int			hitPoints;
 		int			energyPoints;
 		int			attackDmg;
+	private:
 		static int unsigned const	initPoints = 10;
 		static int unsigned const	initEnergy = 10;
 		static int unsigned const	initDmg = 0;

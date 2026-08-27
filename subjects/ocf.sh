@@ -20,11 +20,11 @@ do
 
 class $capClass
 {
-    public:
-        $capClass(void);
-        $capClass(const $capClass& other);
-        $capClass &operator=(const $capClass &other);
-        ~$capClass();
+	public:
+		$capClass(void);
+		$capClass(const $capClass& other);
+		$capClass &operator=(const $capClass &other);
+		~$capClass();
 };
 
 #endif
@@ -39,31 +39,31 @@ EOL
 // Default constructor
 $capClass::$capClass(void)
 {
-    std::cout << "Default constructor called" << std::endl;
-    return ;
+	std::cout << "Default constructor called" << std::endl;
+	return ;
 }
 
 // Copy constructor
 $capClass::$capClass(const $capClass &other)
 {
-    std::cout << "Copy constructor called" << std::endl;
-    (void) other;
-    return ;
+	std::cout << "Copy constructor called" << std::endl;
+	(void) other;
+	return ;
 }
 
 // Assignment operator overload
 $capClass &$capClass::operator=(const $capClass &other)
 {
-    std::cout << "Assignment operator called" << std::endl;
-    (void) other;
-    return (*this);
+	std::cout << "Assignment operator called" << std::endl;
+	(void) other;
+	return (*this);
 }
 
 // Destructor
 $capClass::~$capClass(void)
 {
-    std::cout << "Destructor called" << std::endl;
-    return ;
+	std::cout << "Destructor called" << std::endl;
+	return ;
 }
 
 EOL

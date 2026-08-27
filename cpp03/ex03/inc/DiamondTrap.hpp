@@ -1,18 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ClapTrap.hpp                                       :+:      :+:    :+:   */
+/*   DiamondTrap.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fgameiro <fgameiro@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/08/26 09:26:58 by fgameiro          #+#    #+#             */
-/*   Updated: 2026/08/26 09:26:59 by fgameiro         ###   ########.fr       */
+/*   Created: 2026/08/26 11:17:58 by fgameiro          #+#    #+#             */
+/*   Updated: 2026/08/26 11:41:49 by fgameiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CLAPTRAP_HPP
-# define CLAPTRAP_HPP
+#ifndef DIAMONDTRAP_HPP
+# define DIAMONDTRAP_HPP
 # include <iostream>
+# include "ClapTrap.hpp"
+# include "FragTrap.hpp"
+# include "ScavTrap.hpp"
+
 # define RESET		"\033[0m"
 # define BLACK		"\033[30m"
 # define RED		"\033[31m"
@@ -23,26 +27,16 @@
 # define CYAN		"\033[36m"
 # define WHITE		"\033[37m"
 
-class ClapTrap
+class DiamondTrap : public FragTrap, public ScavTrap
 {
 	private:
 		std::string	name;
-		int			hitPoints;
-		int			energyPoints;
-		int			attackDmg;
-		static int unsigned const	initPoints = 10;
-		static int unsigned const	initEnergy = 10;
-		static int unsigned const	initDmg = 0;
 	public:
-		ClapTrap(void);
-		ClapTrap(std::string _name);
-		ClapTrap(const ClapTrap& other);
-		ClapTrap &operator=(const ClapTrap &other);
-		~ClapTrap();
-		void attack(const std::string& target);
-		void takeDamage(unsigned int amount);
-		void beRepaired(unsigned int amount);
+		DiamondTrap(std::string name);
+		DiamondTrap(const DiamondTrap &other);
+		DiamondTrap &operator=(const DiamondTrap &other);
+		~DiamondTrap(void);
+		void	whoAmI();
 };
 
 #endif
-

@@ -6,26 +6,23 @@
 /*   By: fgameiro <fgameiro@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/24 11:33:32 by fgameiro          #+#    #+#             */
-/*   Updated: 2026/08/25 11:05:44 by fgameiro         ###   ########.fr       */
+/*   Updated: 2026/08/26 09:52:37 by fgameiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "inc/ClapTrap.hpp"
+#include "inc/ScavTrap.hpp"
+#include "inc/FragTrap.hpp"
 
 int	main(void)
 {
-	ClapTrap Jorge("Jorge");
+	FragTrap Jorge("Jorge");
+	ScavTrap Andre("Andre");
 	
-	Jorge.attack("Bruno");
-	Jorge.attack("Bruno");
-	Jorge.attack("Bruno");
-	Jorge.attack("Bruno");
-	Jorge.attack("Bruno");
-	Jorge.attack("Bruno");
-	Jorge.attack("Bruno");
-	Jorge.attack("Bruno");
 	Jorge.takeDamage(9);
 	Jorge.beRepaired(1);
-	Jorge.takeDamage(2);
-	Jorge.beRepaired(1);
+	Andre.guardGate();
+	Andre.guardGate();
+	Andre.attack("Jorge");
+	Jorge.highFivesGuys();
 }

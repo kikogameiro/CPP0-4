@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: fgameiro <fgameiro@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/08/26 09:27:01 by fgameiro          #+#    #+#             */
-/*   Updated: 2026/08/26 09:27:02 by fgameiro         ###   ########.fr       */
+/*   Created: 2026/08/26 09:26:33 by fgameiro          #+#    #+#             */
+/*   Updated: 2026/08/26 09:26:34 by fgameiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 // Default constructor
 ClapTrap::ClapTrap(void)
 {
-	std::cout << "Default constructor called" << std::endl;
+	std::cout << "ClapTrap Default constructor called" << std::endl;
 }
 ClapTrap::ClapTrap(std::string _name)
 {
@@ -23,21 +23,20 @@ ClapTrap::ClapTrap(std::string _name)
 	this->hitPoints = initPoints;
 	this->energyPoints = initEnergy;
 	this->attackDmg = initDmg;
+	std::cout << "ClapTrap constructor called" << std::endl;
 }
 
 // Copy constructor
 ClapTrap::ClapTrap(const ClapTrap &other)
 {
-	if (this != &other)
-	{
-		this->name = other.name;
-		this->hitPoints = other.hitPoints;
-		this->energyPoints = other.energyPoints;
-		this->attackDmg = other.attackDmg;
-	}
+	this->name = other.name;
+	this->hitPoints = other.hitPoints;
+	this->energyPoints = other.energyPoints;
+	this->attackDmg = other.attackDmg;
 }
 
 // Assignment operator overload
+
 ClapTrap &ClapTrap::operator=(const ClapTrap &other)
 {
 	if (this != &other)
@@ -53,7 +52,7 @@ ClapTrap &ClapTrap::operator=(const ClapTrap &other)
 // Destructor
 ClapTrap::~ClapTrap(void)
 {
-	std::cout << "Destructor called" << std::endl;
+	std::cout << "ClapTrap Destructor called" << std::endl;
 }
 
 void ClapTrap::attack(const std::string& target)
