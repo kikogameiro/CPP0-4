@@ -6,7 +6,7 @@
 /*   By: fgameiro <fgameiro@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/25 11:29:21 by fgameiro          #+#    #+#             */
-/*   Updated: 2026/08/25 11:56:01 by fgameiro         ###   ########.fr       */
+/*   Updated: 2026/09/07 10:59:59 by fgameiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,6 @@
 
 class ScavTrap : public ClapTrap
 {
-	private:
-		int	GuardGate;
 	public:
 		ScavTrap(void);
 		ScavTrap(std::string name);

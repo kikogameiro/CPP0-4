@@ -6,7 +6,7 @@
 /*   By: fgameiro <fgameiro@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/26 09:26:29 by fgameiro          #+#    #+#             */
-/*   Updated: 2026/08/26 09:26:30 by fgameiro         ###   ########.fr       */
+/*   Updated: 2026/09/07 10:59:52 by fgameiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,14 +82,5 @@ void ScavTrap::attack(const std::string &target)
 
 void	ScavTrap::guardGate(void)
 {
-	if (GuardGate != 0)
-	{
-		std::cout << "ScavTrap " << YELLOW << name << RESET << " is guarding the gate!\n";
-		GuardGate = 0;
-	}
-	else
-	{
-		std::cout << "ScavTrap " << YELLOW << name << RESET << " is no longer guarding the gate!\n";
-		GuardGate = 1;
-	}
+	std::cout << "ScavTrap " << YELLOW << name << RESET << " is guarding the gate!\n";
 }
