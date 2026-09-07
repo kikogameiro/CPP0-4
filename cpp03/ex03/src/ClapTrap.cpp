@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ClapTrap.cpp                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: fgameiro <fgameiro@student.42lisboa.com    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/09/07 11:03:11 by fgameiro          #+#    #+#             */
+/*   Updated: 2026/09/07 11:03:12 by fgameiro         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../inc/ClapTrap.hpp"
 
-// Default constructor
+
 ClapTrap::ClapTrap(void)
 {
 	std::cout << "ClapTrap Default constructor called" << std::endl;
@@ -14,7 +26,7 @@ ClapTrap::ClapTrap(std::string _name)
 	std::cout << "ClapTrap constructor called" << std::endl;
 }
 
-// Copy constructor
+
 ClapTrap::ClapTrap(const ClapTrap &other)
 {
 	this->name = other.name;
@@ -22,8 +34,6 @@ ClapTrap::ClapTrap(const ClapTrap &other)
 	this->energyPoints = other.energyPoints;
 	this->attackDmg = other.attackDmg;
 }
-
-// Assignment operator overload
 
 ClapTrap &ClapTrap::operator=(const ClapTrap &other)
 {
