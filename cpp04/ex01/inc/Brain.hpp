@@ -1,32 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fgameiro <fgameiro@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/02 12:44:15 by fgameiro          #+#    #+#             */
-/*   Updated: 2026/09/02 12:44:16 by fgameiro         ###   ########.fr       */
+/*   Created: 2026/09/03 09:59:27 by fgameiro          #+#    #+#             */
+/*   Updated: 2026/09/03 10:04:09 by fgameiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ANIMAL_HPP
-# define ANIMAL_HPP
+#ifndef BRAIN_HPP
+# define BRAIN_HPP
+
 # include <iostream>
 # include "Colors.h"
 
-class Animal
+class Brain
 {
-	protected:
-		std::string	type;
+	private:
+		std::string	ideas[100];
 	public:
-		Animal(void);
-		Animal(std::string type);
-		Animal(const Animal& other);
-		Animal &operator=(const Animal &other);
-		virtual ~Animal();
-		std::string			getType(void) const;
-		virtual void		makeSound() const;
+		Brain(void);
+		Brain(const Brain &other);
+		Brain &operator=(const Brain &other);
+		~Brain(void);
+		const std::string	&getIdea(int n) const;
+		void	setIdea(int n, const std::string &idea);
 };
 
 #endif

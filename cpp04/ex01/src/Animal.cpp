@@ -6,7 +6,7 @@
 /*   By: fgameiro <fgameiro@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/26 15:03:58 by fgameiro          #+#    #+#             */
-/*   Updated: 2026/09/02 12:30:47 by fgameiro         ###   ########.fr       */
+/*   Updated: 2026/09/03 10:25:47 by fgameiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,34 +15,34 @@
 // Default constructor
 Animal::Animal(void)
 {
-	std::cout << "Default constructor called" << std::endl;
+	std::cout << "Animal: Default constructor called" << std::endl;
 }
 
 Animal::Animal(std::string type) : type(type)
 {
-	std::cout << "Type constructor called!";
+	std::cout << "Animal: Type constructor called!";
 }
 
 // Copy constructor
 Animal::Animal(const Animal &other)
 {
-	std::cout << "Copy constructor called" << std::endl;
+	std::cout << "Animal: Copy constructor called" << std::endl;
 	*this = other;
 }
 
 // Assignment operator overload
 Animal &Animal::operator=(const Animal &other)
 {
-	std::cout << "Assignment operator called" << std::endl;
+	std::cout << "Animal: Assignment operator called" << std::endl;
 	if (this != &other)
-		*this = other;
+		this->type = other.type;
 	return (*this);
 }
 
 // Destructor
 Animal::~Animal(void)
 {
-	std::cout << "Destructor called" << std::endl;
+	std::cout << "Animal: Destructor called" << std::endl;
 	return ;
 }
 

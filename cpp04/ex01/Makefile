@@ -6,7 +6,7 @@
 #    By: fgameiro <fgameiro@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/08/21 19:24:05 by fgameiro          #+#    #+#              #
-#    Updated: 2026/09/02 16:18:58 by fgameiro         ###   ########.fr        #
+#    Updated: 2026/09/03 10:18:34 by fgameiro         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,14 +21,16 @@ INCLUDES	=	inc/Animal.hpp \
 				inc/Dog.hpp \
 				inc/WrongAnimal.hpp \
 				inc/WrongCat.hpp \
-				inc/Colors.hpp \
+				inc/Brain.hpp \
+				inc/Colors.hpp
 
 SRCS		=	main.cpp \
 				src/Cat.cpp \
 				src/Dog.cpp \
 				src/Animal.cpp \
 				src/WrongAnimal.cpp \
-				src/WrongCat.cpp
+				src/WrongCat.cpp \
+				src/Brain.cpp
 
 OBJ_DIR		= obj
 OBJS		= $(addprefix $(OBJ_DIR)/,$(SRCS:.cpp=.o))

@@ -1,32 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fgameiro <fgameiro@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/02 12:44:15 by fgameiro          #+#    #+#             */
-/*   Updated: 2026/09/02 12:44:16 by fgameiro         ###   ########.fr       */
+/*   Created: 2026/09/02 12:44:20 by fgameiro          #+#    #+#             */
+/*   Updated: 2026/09/03 10:41:20 by fgameiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ANIMAL_HPP
-# define ANIMAL_HPP
+#ifndef DOG_HPP
+# define DOG_HPP
 # include <iostream>
-# include "Colors.h"
+# include "AAnimal.hpp"
+# include "Brain.hpp"
 
-class Animal
+class Dog : public AAnimal
 {
-	protected:
-		std::string	type;
+	private:
+		Brain* brain;
 	public:
-		Animal(void);
-		Animal(std::string type);
-		Animal(const Animal& other);
-		Animal &operator=(const Animal &other);
-		virtual ~Animal();
-		std::string			getType(void) const;
-		virtual void		makeSound() const;
+		Dog(void);
+		Dog(const Dog& other);
+		Dog &operator=(const Dog &other);
+		~Dog();
+		void	makeSound() const;
+		void setIdea(int n, const std::string &idea);
+		std::string getIdea(int n) const;
 };
 
 #endif

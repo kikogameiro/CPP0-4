@@ -1,32 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fgameiro <fgameiro@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/02 12:44:15 by fgameiro          #+#    #+#             */
-/*   Updated: 2026/09/02 12:44:16 by fgameiro         ###   ########.fr       */
+/*   Created: 2026/09/02 12:44:22 by fgameiro          #+#    #+#             */
+/*   Updated: 2026/09/03 10:09:32 by fgameiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ANIMAL_HPP
-# define ANIMAL_HPP
+#ifndef CAT_HPP
+# define CAT_HPP
 # include <iostream>
-# include "Colors.h"
+# include "Animal.hpp"
+# include "Brain.hpp"
 
-class Animal
+class Cat : public Animal
 {
-	protected:
-		std::string	type;
+	private:
+		Brain* brain;
 	public:
-		Animal(void);
-		Animal(std::string type);
-		Animal(const Animal& other);
-		Animal &operator=(const Animal &other);
-		virtual ~Animal();
-		std::string			getType(void) const;
-		virtual void		makeSound() const;
+		Cat(void);
+		Cat(const Cat& other);
+		Cat &operator=(const Cat &other);
+		~Cat();
+		void	makeSound() const;
+		void setIdea(int n, const std::string &idea);
+		std::string getIdea(int n) const;
 };
 
 #endif
+

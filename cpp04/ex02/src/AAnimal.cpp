@@ -1,32 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   AAnimal.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fgameiro <fgameiro@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/02 12:44:15 by fgameiro          #+#    #+#             */
-/*   Updated: 2026/09/02 12:44:16 by fgameiro         ###   ########.fr       */
+/*   Created: 2026/08/26 15:03:58 by fgameiro          #+#    #+#             */
+/*   Updated: 2026/09/03 10:39:09 by fgameiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ANIMAL_HPP
-# define ANIMAL_HPP
-# include <iostream>
-# include "Colors.h"
+#include "../inc/AAnimal.hpp"
 
-class Animal
+// Default constructor
+AAnimal::AAnimal(void)
 {
-	protected:
-		std::string	type;
-	public:
-		Animal(void);
-		Animal(std::string type);
-		Animal(const Animal& other);
-		Animal &operator=(const Animal &other);
-		virtual ~Animal();
-		std::string			getType(void) const;
-		virtual void		makeSound() const;
-};
+	std::cout << "AAnimal: Default constructor called" << std::endl;
+}
 
-#endif
+// Destructor
+AAnimal::~AAnimal(void)
+{
+	std::cout << "AAnimal: Destructor called" << std::endl;
+	return ;
+}

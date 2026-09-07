@@ -6,43 +6,58 @@
 /*   By: fgameiro <fgameiro@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/02 12:44:11 by fgameiro          #+#    #+#             */
-/*   Updated: 2026/09/02 16:25:39 by fgameiro         ###   ########.fr       */
+/*   Updated: 2026/09/03 10:40:53 by fgameiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/Dog.hpp"
 
 // Default constructor
-Dog::Dog(void)
+Dog::Dog() : AAnimal(), brain(new Brain())
 {
-	std::cout << "Default Dog constructor called" << std::endl;
-	this->Animal::type = "Dog";
+	type = "Dog";
+	std::cout << GREEN
+				<< "Dog: Default constructor called"
+				<< RESET << std::endl;
 }
 
 // Copy constructor
-Dog::Dog(const Dog &other)
+Dog::Dog(const Dog &other) : AAnimal(other), brain(new Brain(*other.brain))
 {
-	std::cout << "Copy constructor called" << std::endl;
-	this->type = other.type;
+	std::cout << YELLOW << "Dog: Copy constructor called" << RESET << std::endl;
 }
 
 // Assignment operator overload
 Dog &Dog::operator=(const Dog &other)
 {
-	std::cout << "Assignment operator called" << std::endl;
+	std::cout << MAGENTA << "Dog: Assignment operator called" << RESET << std::endl;
 	if (this != &other)
+	{
 		this->type = other.type;
-	return (*this);
+		delete this->brain;
+		this->brain = new Brain(*other.brain);
+	}
+	return *this;
 }
 
 // Destructor
 Dog::~Dog(void)
 {
-	std::cout << "Destructor called" << std::endl;
-	return ;
+	std::cout << RED << "Dog: Destructor called" << RESET << std::endl;
+	delete brain;
 }
 
 void	Dog::makeSound( void ) const
 {
 	std::cout << GREEN << "Woof Woof" << RESET << std::endl;
+}
+
+void Dog::setIdea(int n, const std::string &idea)
+{
+	brain->setIdea(n, idea);
+}
+
+std::string Dog::getIdea(int n) const
+{
+	return brain->getIdea(n);
 }

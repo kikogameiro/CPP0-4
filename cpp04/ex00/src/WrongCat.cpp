@@ -1,33 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.cpp                                            :+:      :+:    :+:   */
+/*   WrongCat.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fgameiro <fgameiro@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/02 12:44:11 by fgameiro          #+#    #+#             */
-/*   Updated: 2026/09/02 16:25:39 by fgameiro         ###   ########.fr       */
+/*   Created: 2026/09/02 12:44:13 by fgameiro          #+#    #+#             */
+/*   Updated: 2026/09/02 16:26:28 by fgameiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/Dog.hpp"
+#include "../inc/WrongCat.hpp"
 
 // Default constructor
-Dog::Dog(void)
+WrongCat::WrongCat(void)
 {
-	std::cout << "Default Dog constructor called" << std::endl;
-	this->Animal::type = "Dog";
+	std::cout << "Default WrongCat constructor called" << std::endl;
+	type = "WrongCat";
 }
 
 // Copy constructor
-Dog::Dog(const Dog &other)
+WrongCat::WrongCat(const WrongCat &other)
 {
 	std::cout << "Copy constructor called" << std::endl;
 	this->type = other.type;
 }
 
 // Assignment operator overload
-Dog &Dog::operator=(const Dog &other)
+WrongCat &WrongCat::operator=(const WrongCat &other)
 {
 	std::cout << "Assignment operator called" << std::endl;
 	if (this != &other)
@@ -36,13 +36,8 @@ Dog &Dog::operator=(const Dog &other)
 }
 
 // Destructor
-Dog::~Dog(void)
+WrongCat::~WrongCat(void)
 {
 	std::cout << "Destructor called" << std::endl;
 	return ;
-}
-
-void	Dog::makeSound( void ) const
-{
-	std::cout << GREEN << "Woof Woof" << RESET << std::endl;
 }
