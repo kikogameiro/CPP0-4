@@ -6,10 +6,11 @@
 /*   By: fgameiro <fgameiro@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/02 14:47:43 by fgameiro          #+#    #+#             */
-/*   Updated: 2026/09/02 16:21:52 by fgameiro         ###   ########.fr       */
+/*   Updated: 2026/09/08 10:23:41 by fgameiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <iostream>
 #include "inc/Animal.hpp"
 #include "inc/Dog.hpp"
 #include "inc/Cat.hpp"
@@ -51,6 +52,7 @@ int main()
 
 	const WrongAnimal* wrongAnimal = new WrongAnimal();
 	const WrongAnimal* wrongCat = new WrongCat();
+	WrongCat wrongCato;
 
 	std::cout << std::endl;
 
@@ -66,8 +68,13 @@ int main()
 
 	std::cout << std::endl;
 
+	std::cout << "WrongCato type: "
+			<< wrongCato.getType() << std::endl;
+	wrongCato.makeSound();
+
+	std::cout << std::endl;
+
 	delete wrongAnimal;
 	delete wrongCat;
-
 	return 0;
 }

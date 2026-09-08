@@ -6,14 +6,14 @@
 /*   By: fgameiro <fgameiro@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/26 15:03:58 by fgameiro          #+#    #+#             */
-/*   Updated: 2026/09/02 16:26:35 by fgameiro         ###   ########.fr       */
+/*   Updated: 2026/09/08 10:22:30 by fgameiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/WrongAnimal.hpp"
 
 // Default constructor
-WrongAnimal::WrongAnimal(void)
+WrongAnimal::WrongAnimal(void) : type("WrongAnimal")
 {
 	std::cout << "Default WrongAnimal constructor called" << std::endl;
 }
@@ -42,7 +42,7 @@ WrongAnimal &WrongAnimal::operator=(const WrongAnimal &other)
 // Destructor
 WrongAnimal::~WrongAnimal(void)
 {
-	std::cout << "Destructor called" << std::endl;
+	std::cout << "Wrong Animal Destructor called" << std::endl;
 	return ;
 }
 

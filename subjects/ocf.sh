@@ -25,8 +25,8 @@ create_colors()
 	local Colors="$hppPath/Colors.h"
 
 	cat > "$Colors" << EOL
-#ifndef COLORS
-# define COLORS
+#ifndef COLORS_H
+# define COLORS_H
 
 # define RESET		"\033[0m"
 # define BLACK		"\033[30m"

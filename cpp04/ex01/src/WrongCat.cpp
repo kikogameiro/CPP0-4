@@ -6,7 +6,7 @@
 /*   By: fgameiro <fgameiro@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/02 12:44:13 by fgameiro          #+#    #+#             */
-/*   Updated: 2026/09/02 16:26:28 by fgameiro         ###   ########.fr       */
+/*   Updated: 2026/09/08 10:28:25 by fgameiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,11 @@ WrongCat &WrongCat::operator=(const WrongCat &other)
 // Destructor
 WrongCat::~WrongCat(void)
 {
-	std::cout << "Destructor called" << std::endl;
+	std::cout << "WrongCat Destructor called" << std::endl;
 	return ;
+}
+
+void		WrongCat::makeSound() const
+{
+	std::cout << GREEN << "Wrong Miau Miau" << RESET << std::endl;
 }

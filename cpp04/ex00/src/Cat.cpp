@@ -6,7 +6,7 @@
 /*   By: fgameiro <fgameiro@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/02 12:44:13 by fgameiro          #+#    #+#             */
-/*   Updated: 2026/09/02 16:25:49 by fgameiro         ###   ########.fr       */
+/*   Updated: 2026/09/08 10:20:04 by fgameiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ Cat &Cat::operator=(const Cat &other)
 // Destructor
 Cat::~Cat(void)
 {
-	std::cout << "Destructor called" << std::endl;
+	std::cout << "Cat Destructor called" << std::endl;
 	return ;
 }
 

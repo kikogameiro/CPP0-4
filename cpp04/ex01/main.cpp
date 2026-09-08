@@ -6,7 +6,7 @@
 /*   By: fgameiro <fgameiro@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/02 14:47:43 by fgameiro          #+#    #+#             */
-/*   Updated: 2026/09/03 10:19:24 by fgameiro         ###   ########.fr       */
+/*   Updated: 2026/09/08 10:52:23 by fgameiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,9 +85,12 @@ int main(void)
 
 	std::cout << "Original dog idea 0: "
 			<< dog1.getIdea(0) << std::endl;
-
+	std::cout << "Original dog idea 1: "
+			<< dog1.getIdea(1) << std::endl;
 	std::cout << "Copied dog idea 0:   "
 			<< dog2.getIdea(0) << std::endl;
+	std::cout << "Copied dog idea 1:   "
+			<< dog2.getIdea(1) << std::endl;
 
 
 	/* ========================================================= */
@@ -99,7 +102,7 @@ int main(void)
 	Cat cat1;
 
 	cat1.setIdea(0, "Climb the tree");
-	cat1.setIdea(1, "Sleep all day");
+	cat1.setIdea(1, "Flee the dog");
 
 	Cat cat2(cat1);
 
@@ -116,10 +119,12 @@ int main(void)
 
 	std::cout << "Original cat idea 0: "
 			<< cat1.getIdea(0) << std::endl;
-
+	std::cout << "Original cat idea 1: "
+			<< cat1.getIdea(1) << std::endl;
 	std::cout << "Copied cat idea 0:   "
 			<< cat2.getIdea(0) << std::endl;
-
+	std::cout << "Copied cat idea 1:   "
+			<< cat2.getIdea(1) << std::endl;
 
 	/* ========================================================= */
 	/*             ASSIGNMENT OPERATOR TEST                      */

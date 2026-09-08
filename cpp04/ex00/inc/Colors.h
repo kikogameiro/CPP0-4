@@ -6,12 +6,12 @@
 /*   By: fgameiro <fgameiro@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/26 15:14:13 by fgameiro          #+#    #+#             */
-/*   Updated: 2026/08/26 15:14:52 by fgameiro         ###   ########.fr       */
+/*   Updated: 2026/09/08 10:03:25 by fgameiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef COLORS
-# define COLORS
+#ifndef COLORS_H
+# define COLORS_H
 
 # define RESET		"\033[0m"
 # define BLACK		"\033[30m"

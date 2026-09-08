@@ -6,7 +6,7 @@
 /*   By: fgameiro <fgameiro@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/02 12:44:11 by fgameiro          #+#    #+#             */
-/*   Updated: 2026/09/02 16:25:39 by fgameiro         ###   ########.fr       */
+/*   Updated: 2026/09/08 10:22:01 by fgameiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ Dog &Dog::operator=(const Dog &other)
 // Destructor
 Dog::~Dog(void)
 {
-	std::cout << "Destructor called" << std::endl;
+	std::cout << "Dog Destructor called" << std::endl;
 	return ;
 }
 

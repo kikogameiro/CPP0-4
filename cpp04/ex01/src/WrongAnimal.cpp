@@ -6,7 +6,7 @@
 /*   By: fgameiro <fgameiro@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/26 15:03:58 by fgameiro          #+#    #+#             */
-/*   Updated: 2026/09/02 16:26:35 by fgameiro         ###   ########.fr       */
+/*   Updated: 2026/09/08 10:26:02 by fgameiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ WrongAnimal::WrongAnimal(void)
 
 WrongAnimal::WrongAnimal(std::string type) : type(type)
 {
-	std::cout << "Type constructor called!";
+	std::cout << "Wrong Animal:Type constructor called!";
 }
 
 // Copy constructor

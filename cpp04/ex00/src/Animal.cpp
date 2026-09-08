@@ -6,21 +6,21 @@
 /*   By: fgameiro <fgameiro@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/26 15:03:58 by fgameiro          #+#    #+#             */
-/*   Updated: 2026/09/02 12:30:47 by fgameiro         ###   ########.fr       */
+/*   Updated: 2026/09/08 10:21:15 by fgameiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/Animal.hpp"
 
 // Default constructor
-Animal::Animal(void)
+Animal::Animal(void) : type("Animal")
 {
-	std::cout << "Default constructor called" << std::endl;
+	std::cout << "Default Animal constructor called" << std::endl;
 }
 
 Animal::Animal(std::string type) : type(type)
 {
-	std::cout << "Type constructor called!";
+	std::cout << "Animal Type constructor called!";
 }
 
 // Copy constructor
@@ -42,7 +42,7 @@ Animal &Animal::operator=(const Animal &other)
 // Destructor
 Animal::~Animal(void)
 {
-	std::cout << "Destructor called" << std::endl;
+	std::cout << "Animal Destructor called" << std::endl;
 	return ;
 }
 

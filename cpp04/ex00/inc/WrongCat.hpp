@@ -6,7 +6,7 @@
 /*   By: fgameiro <fgameiro@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/02 12:44:22 by fgameiro          #+#    #+#             */
-/*   Updated: 2026/09/02 16:23:35 by fgameiro         ###   ########.fr       */
+/*   Updated: 2026/09/08 10:12:06 by fgameiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ class WrongCat : public WrongAnimal
 		WrongCat(const WrongCat& other);
 		WrongCat &operator=(const WrongCat &other);
 		~WrongCat();
+		void		makeSound() const;
 };
 
 #endif

@@ -6,12 +6,11 @@
 /*   By: fgameiro <fgameiro@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/07 11:03:11 by fgameiro          #+#    #+#             */
-/*   Updated: 2026/09/07 11:03:12 by fgameiro         ###   ########.fr       */
+/*   Updated: 2026/09/07 11:50:06 by fgameiro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/ClapTrap.hpp"
-
 
 ClapTrap::ClapTrap(void)
 {
